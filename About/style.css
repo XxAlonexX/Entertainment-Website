@@ -1,0 +1,87 @@
+/* This Part is only for card */
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+    background: url(/About/Image/About_background.png);
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    min-height: 600px;
+    background: rgb(119, 43, 43);
+    box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.card:hover{
+    box-shadow: 0 500px 500px rgba(0,0,0,0.3);
+}
+.card .box{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 60px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* This part is for Image */
+.card .box .img{
+    width: 210px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.card .box .img{
+    transition: 0.9s;
+    width: 100%;
+}
+.card .box .img:hover img{
+    transform: scale(1.2);
+}
+.card .box h2{
+    font-size: 40px;
+    color: #dfdfdf;
+}
+.card .box h2 span{
+    font-size: 14px;
+    background: #991d7a;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+/* This Part is for Icons */
+.card .box p{
+    color: rgb(233,214,214);
+    font-size: 20px;
+
+}
+.card .box ul{
+margin: 0;
+padding: 0;
+display: inline-block;
+}
+.card .box ul li{
+    list-style: none;
+    float: left;
+}
+.card .box ul li a{
+    display: block;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 30px;
+    transition: 0.5s;
+    text-align: center;
+}
+.card .box ul li:hover a{
+    color: #991d7a;
+    transform: rotateY(360deg);
+}

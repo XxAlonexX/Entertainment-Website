@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(https://wallup.net/wp-content/uploads/2015/07/Cartoon-cats-tom-and-jerry.jpg);
+   
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .icons{
+    margin: 1.2em;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 10;
+
+}
+.container .icons a{
+    padding: 0.6em 0.7em;
+    color: rgb(44,44,44);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border-image: url(/Contact_info/Image/Contacts_background.jpg);
+    transition: color .4s;
+}
+.container .icons a:hover{
+    color: rgb(255,255,255);
+}
+.container .icons::before,
+.container .icons::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    background: rgba(156, 98, 51, 0);
+    z-index: -1;
+    transition: clip-path 0.4s;
+}
+.container .icons::after{
+    top: 5px; left: 5px; background: #a39797;
+}
+.container .icons::before{
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+}
+.container .icons:hover::before{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    border-radius: 0 0 50px 0;
+}
+.container .icons::after{
+    clip-path: polygon(100% 100%,100% 100%,100% 100%,100% 100%);
+}
+.container .icons:hover::after{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+    border-radius: 50px 0 0 0;
+}
+
+/* Responsive code  */
+@media screen and (max-width: 800px){
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:url(https://i.pinimg.com/736x/1e/29/c6/1e29c6865186cc042024f169da722290--iphone--wallpaper-wallpaper-backgrounds.jpg);
+       
+    }
+   
+}
